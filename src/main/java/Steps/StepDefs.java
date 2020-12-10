@@ -53,6 +53,7 @@ public class StepDefs {
     public void вПолеРегионВведеноЗначениеN(String city) throws InterruptedException {
         driver.findElement(By.xpath("//input[@data-marker='popup-location/region/input']")).sendKeys(city);
         Thread.sleep(1000);
+        driver.findElement(By.xpath("//li[@data-marker='suggest(0)']")).click();
     }
 
     @И("нажата кнопка показать объявления")
